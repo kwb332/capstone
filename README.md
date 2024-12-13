@@ -47,13 +47,13 @@ The methodology is based on the following steps:
 6.  Using GridSearchCV to optimize all the models with selected hyper parameters
 7.  Selecting the best model
 
-#### Results
+#### Finding
 ![alt text](image-1.png)
 
-Polynomial model was the best result with an accuray of 89%
+Polynomial model was the best result with an accuray of 89%.  See Jupyter Notebook for graphs that compare accuracy score of both the test and train data.  The Neural Network failed to converge and so was left out of the results.  
 
 #### Next steps
-Use Streamlit library to build a UI interface that can make predictions based on inputs.
+Use Streamlit library to build a UI interface that can make predictions based on inputs.  Try and get a KerasRegressor to work as an additional model.  Optimize the KerasRegressor using GridSearchCV
 
 #### Outline of project
 

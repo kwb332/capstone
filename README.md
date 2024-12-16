@@ -50,10 +50,10 @@ The methodology is based on the following steps:
 #### Finding
 ![alt text](image-1.png)
 
-Polynomial model was the best result with an accuray of 89%.  See Jupyter Notebook for graphs that compare accuracy score of both the test and train data.  The Neural Network failed to converge and so was left out of the results.  
+Polynomial model was the best result with an accuray of 89%.  See Jupyter Notebook for graphs that compare accuracy score of both the test and train data.  The Neural Network was the lowest performing even given the use of a tunner.  500 Epochs were run on the the Neural Network Models.  
 
 #### Next steps
-Use Streamlit library to build a UI interface that can make predictions based on inputs.  Try and get a KerasRegressor to work as an additional model.  Optimize the KerasRegressor using GridSearchCV
+Use Streamlit library to build a UI interface that can make predictions based on inputs.  Try to get the Neural Model to perform better by running more than 500 Epochs for the tunner and fitting of the model.
 
 #### Outline of project
 
@@ -62,4 +62,4 @@ https://github.com/kwb332/capstone.git
 
 
 ##### Contact and Further Information
-kwb332@gmail.com
+kwb332@gmail.comkj v 

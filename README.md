@@ -3,7 +3,7 @@ Predicting Life Expectancy Based on Longevity Factors
 **Author**
 Kwame Apraku
 #### Executive summary
-The business objective is to analyze the dataset of health data and its features to determine what features can be use to create the most optimal prediction model for predicting how long a person will live. In addition to determining the most critical features, the business objective is to determine what model performs the best in the prediction based on training time and accuracy score.
+The business objective is to analyze the dataset of health data and its features to determine what features can be used to create the most optimal prediction model for predicting how long a person will live. In addition to determining the most critical features, the business objective is to determine what model performs the best in the prediction based on training time and R2 score. 
 #### Rationale
 This question is important because longevity is important.  Finding out the best set of features that will promote longevity and making lifestyle adjustments to correct dangers to ones health are very important.
 
@@ -38,22 +38,21 @@ Schooling : Number of years of Schooling(years)
 #### Methodology
 The methodology is based on the following steps:
 
-1. Understanding the Data by using visualization and summarizations of the data.  This will help understand the number of null values in the data and the correlation of the datas independent variables to the dependant variable
+1. Understanding the Data by using visualization and summarizations of the data.  This will help understand the number of null values in the data and the correlation of the datas independent variables to the dependant variable.  Specifically, scatterplots are used for each independent variable and they are plotted independently against the dependant variable to visualize their correlation.
 
-2. Data Cleaning and normalization:  Replacing null and empty values with averages or removing them entirely.  Performing Column transformation to get data into numerics, as it is obvious from the get go that the problems is a regression problem.
+2. Data Cleaning and normalization:  Replacing null and empty values with averages or removing them entirely.  Performing Column transformation to get data into numerics, as it is obvious from the get go that the problems is a regression problem.  From the visualization stage it is more clear what kind of data transformation is needed:  Ordinal, one hot encoding etc.
 3. Splitting the data in to Train/Test for cross validation
 4.  Creating a baseline Model using simple linear regression
-5. Comparing this baseline model to SFS, Ridge, Lasso and Polynomial Feature using accuracy score and average fit time as the metric
+5. Comparing this baseline model to SFS, Ridge, Random Forest, Neural Network and Polynomial Feature using R2 score and average fit time as the metric
 6.  Using GridSearchCV to optimize all the models with selected hyper parameters
 7.  Selecting the best model
 
-#### Finding
-![alt text](image-1.png)
+#### Findings
 
-Polynomial model was the best result with an accuray of 89%.  See Jupyter Notebook for graphs that compare accuracy score of both the test and train data.  The Neural Network was the lowest performing even given the use of a tunner.  500 Epochs were run on the the Neural Network Models.  
+The Random Forest Regressor was the best performing Model with a 96% score, The Polynomial model was the second best result with a score of 89%.  See Jupyter Notebook for graphs that compare accuracy score of both the test and train data.  The Neural Network was the lowest performing even given the use of a tunner.  1000 Epochs were run on the the Neural Network Models.  The Neural Model also have a very long fiting time of over 800 seconds.  
 
 #### Next steps
-Use Streamlit library to build a UI interface that can make predictions based on inputs.  Try to get the Neural Model to perform better by running more than 500 Epochs for the tunner and fitting of the model.
+Use Streamlit library to build a UI interface that can make predictions based on inputs.  Try to get the Neural Model to perform better by running more than 1000 Epochs for the tunner and fitting of the model.
 
 #### Outline of project
 
@@ -62,4 +61,4 @@ https://github.com/kwb332/capstone.git
 
 
 ##### Contact and Further Information
-kwb332@gmail.comkj v 
+kwb332@gmail.com
